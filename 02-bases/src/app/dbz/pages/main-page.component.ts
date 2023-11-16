@@ -25,4 +25,13 @@ export class MainPageComponent {
     }
   ];
 
+  onNewCharacter( character: Character ): void {
+    this.characters.push(character);
+  };
+
+  onDeleteCharacter( id:number ): void {
+    console.log(id);
+    this.characters.splice(id, 1);
+  }
+
 }
