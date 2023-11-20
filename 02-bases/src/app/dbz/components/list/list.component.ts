@@ -21,7 +21,7 @@ export class ListComponent {
 
 
   onDeleteCharacter( id?: string ): void {
-    if( !id ) return;;
+    if( !id ) return;
     this.deleteID.emit(id);
   }
 }
