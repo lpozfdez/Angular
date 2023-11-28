@@ -1,5 +1,5 @@
 import { interval, Subject } from 'rxjs';
-import { take, map, sampleTime, sample, throttleTime, auditTime, debounceTime, tap } from 'rxjs/operators';
+import { take, map } from 'rxjs/operators';
 /**
  * Ejercicio: Realizar que los dos observables finales, 
  * emitan exactamente el mismo valor
