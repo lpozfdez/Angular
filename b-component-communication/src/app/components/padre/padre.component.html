@@ -1,0 +1,15 @@
+<div class="container contenedor" >
+  <h3>Componente padre</h3>
+  <div id="message"></div>
+
+  <hr>
+
+  <button class="btn btn-primary btn-lg m-3" (click)="getMessageByService()" >Use Service</button>
+
+  <button class="btn btn-warning btn-lg m-3" (click)="getMessageByInput()">Use Input Property</button><!--Evento que realiza el cambio en la prop message-->
+
+  <button class="btn btn-danger btn-lg m-3" #btnObs (click)="getMessageByObs(btnObs)" >Use Observable</button>
+
+  <app-hijo [messageParent]="message" ></app-hijo><!-- Mandamos la prop message al hijo -->
+
+</div>
