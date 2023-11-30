@@ -7,7 +7,7 @@ export class MessageService {
 
   constructor() { }
 
-  getMessageByService( elem: string ){
+  getMessageByService( elem: string ): string{
     return `EL ${elem} USA UN SERVICIO`;
   }
 
