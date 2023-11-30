@@ -1,5 +1,5 @@
 import {  Component  } from '@angular/core';
-import { fromEvent, map, Observable } from 'rxjs';
+import { Observable, fromEvent, map } from 'rxjs';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { MessageService } from '../../services/message.service';
 
 export class PadreComponent {
   message: string = '';
+  messageChild: string ='';
 
   constructor( private msServ: MessageService ){}
 
@@ -30,5 +31,13 @@ export class PadreComponent {
   getMessageByService(){
     this.message = this.msServ.getMessageByService( 'PADRE' );
   }
+
+  //Trae el mensaje desde el hijo mediante el evento Output
+  getMessageChildOutput(msg: string){
+    console.log(msg)
+    this.messageChild = msg;
+  }
+
+
 
 }

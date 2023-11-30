@@ -1,6 +1,6 @@
 <div class="container contenedor" >
   <h3>Componente padre</h3>
-  <div id="message"></div>
+  <div> {{messageChild}}</div>
 
   <hr>
 
@@ -10,6 +10,11 @@
 
   <button class="btn btn-danger btn-lg m-3" #btnObs (click)="getMessageByObs(btnObs)" >Use Observable</button>
 
-  <app-hijo [messageParent]="message" ></app-hijo><!-- Mandamos la prop message al hijo -->
+  <!-- Mandamos la prop message al hijo  (messageEmit)="getMessageChildOutput($event)" -->
+  <app-hijo
+    [messageParent]="message"
+    (messageChildOutput)="getMessageChildOutput($event)"
+  ></app-hijo>
+
 
 </div>
