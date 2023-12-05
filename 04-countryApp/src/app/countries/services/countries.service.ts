@@ -12,6 +12,7 @@ export class CountriesService {
 
   private apiUrl: string = 'https://restcountries.com/v3.1';
 
+  //Objeto para guardar en localStorage
   public cacheStore: CacheStore = {
     byCapital: { term:'', countries: [] },
     byCountries: { term:'', countries: [] },
@@ -19,7 +20,7 @@ export class CountriesService {
   }
 
   constructor(private http: HttpClient) {
-    this.loadFromLocalStorage();
+    this.loadFromLocalStorage();//Recupera los datos de localstorage
   }
 
 
@@ -34,6 +35,7 @@ export class CountriesService {
     this.cacheStore = JSON.parse( localStorage.getItem('cacheStore')! );
   }
 
+  //Hace la llamada y maneja el error
   private getCountriesRequest( url: string ): Observable<Country[]>{
     return this.http.get<Country[]>(url).pipe(
       catchError( () => of([]) ),
@@ -52,7 +54,7 @@ export class CountriesService {
     return this.getCountriesRequest(url)
     .pipe(
       tap( countries => this.cacheStore.byCapital = { term , countries} ),
-      tap( () => this.saveToLocalStorage() )
+      tap( () => this.saveToLocalStorage() )//Guardar los datos de búsqueda en localstore
     );
   }
 

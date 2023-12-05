@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { fromEvent, map } from 'rxjs';
+import { Subject, fromEvent, of, tap } from 'rxjs';
 import { MessageService } from '../../services/message.service';
 
 @Component({
@@ -12,6 +12,7 @@ import { MessageService } from '../../services/message.service';
 export class PadreComponent {
   message: string = '';
   messageChild: string ='';
+  messageObj = new Subject<string>();
 
   constructor( private msServ: MessageService ){}
 
@@ -21,11 +22,8 @@ export class PadreComponent {
   }
 
   //Se cambia el mensaje mediante observable
-  setMessageByObs( elem: HTMLElement ){
-
-    fromEvent<PointerEvent>( elem , 'click' ).pipe(
-      map( elem => this.message = 'EL PADRE USA UN OBSERVABLE' )
-    ).subscribe(console.log);
+  setMessageByObs(){
+    this.messageObj.next('EL PADRE USA UN OBSERVABLE');
   }
 
   //Se cambia el mensaje mediante un servicio
@@ -35,7 +33,6 @@ export class PadreComponent {
 
   //Trae el mensaje desde el hijo mediante el evento Output
   getMessageChildOutput(msg: string){
-    console.log(msg)
     this.messageChild = msg;
   }
 

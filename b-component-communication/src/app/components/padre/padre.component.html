@@ -8,12 +8,12 @@
 
   <button class="btn btn-warning btn-lg m-3" (click)="setMessageByInput()">Use Input Property</button><!--Evento que realiza el cambio en la prop message-->
 
-  <button class="btn btn-danger btn-lg m-3" #btnObs (click)="setMessageByObs(btnObs)" >Use Observable</button>
+  <button class="btn btn-danger btn-lg m-3" (click)="setMessageByObs()" >Use Observable</button>
 
   <!-- Mandamos la prop message al hijo  (messageEmit)="getMessageChildOutput($event)" -->
   <app-hijo
     [messageParent]="message"
-
+    [messageParentObs]="messageObj"
     (messageChildOutput)="getMessageChildOutput($event)"
     (messageChildObs)="getMessageChildObs($event)"
     (messageToParent)="getMessageByService( $event )"
