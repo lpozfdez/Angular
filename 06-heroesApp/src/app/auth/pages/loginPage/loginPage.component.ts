@@ -3,7 +3,7 @@ import { Component, type OnInit } from '@angular/core';
 @Component({
   selector: 'app-login-page',
   standalone: false,
-  template: `<p>loginPage works!</p>`,
+  templateUrl: 'loginPage.component.html',
   styles: [`
     :host {
       display: block;

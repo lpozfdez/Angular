@@ -3,7 +3,7 @@ import { Component, type OnInit } from '@angular/core';
 @Component({
   selector: 'app-layout-page',
   standalone: false,
-  template: `<p>layoutPage works!</p>`,
+  templateUrl: 'layoutPage.component.html',
   styles: [`
     :host {
       display: block;
