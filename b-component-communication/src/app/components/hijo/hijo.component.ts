@@ -9,15 +9,13 @@ import { MessageService } from 'src/app/services/message.service';
   styleUrls: ['./hijo.component.css'],
 })
 export class HijoComponent implements OnInit{
-
+  //Se recibe el mensaje
   @Input() public messageParent: string = '';
   @Input() public messageParentObs = new Subject<string>();
 
-
+  //Se envia del mensaje
   @Output() public messageToParent = new EventEmitter<string>();
-
   @Output() public messageChildObs = new Subject<string>();
-
   @Output() public messageChildOutput = new EventEmitter<string>();
 
   constructor( private mService: MessageService ){}

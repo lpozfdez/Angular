@@ -10,8 +10,11 @@ import { MessageService } from '../../services/message.service';
 })
 
 export class PadreComponent {
+
+  //Se recibe el mensaje
   message: string = '';
   messageChild: string ='';
+  //Se envia el mensaje
   messageObj = new Subject<string>();
 
   constructor( private msServ: MessageService ){}
