@@ -7,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class LayoutPageComponent implements OnInit{
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+export class LayoutPageComponent{
 
   public sidebarItems = [
     {label: 'Listado', icon: 'label', url: './list'},
