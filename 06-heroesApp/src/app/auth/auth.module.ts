@@ -13,11 +13,13 @@ import { MaterialModule } from '../material/material.module';
     LayoutPageComponent,
     LoginPageComponent,
     RegisterPageComponent,
+
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
+
   ]
 })
 export class AuthModule { }

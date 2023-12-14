@@ -14,15 +14,23 @@
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
       "characters": "Bruce Wayne",
-      "alt_img": "https://i.ebayimg.com/images/g/X~IAAOSwul1jgqlL/s-l1200.jpg"
+      "alt_img": "https://digitalheroes.com/cdn/shop/products/STL153767_1024x1024@2x.jpg"
     },
     {
-      "id": "dc-superman",
-      "superhero": "Superman",
+      "id": "dc-flash",
+      "superhero": "Flash",
       "publisher": "DC Comics",
-      "alter_ego": "Kal-El",
-      "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "alter_ego": "Jay Garrick",
+      "first_appearance": "Flash Comics #1",
+      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+    },
+    {
+      "id": "dc-green",
+      "superhero": "Green Lantern",
+      "publisher": "DC Comics",
+      "alter_ego": "Alan Scott",
+      "first_appearance": "All-American Comics #16",
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
     },
     {
       "id": "dc-arrow",
@@ -151,15 +159,6 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
-    },
-    {
-      "id": "_11fspP",
-      "superhero": "Harry Potter",
-      "publisher": "DC Comics",
-      "alter_ego": "Harry Potter",
-      "first_appearance": "Harry Potter y la piedra filosofal",
-      "characters": "Harry Potter",
-      "alt_img": "https://static.posters.cz/image/750/harry-potter-philosopher-s-stone-i104639.jpg"
     }
   ]
 }
