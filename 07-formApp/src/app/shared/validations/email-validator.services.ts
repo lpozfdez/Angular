@@ -39,6 +39,17 @@ export class EmailValidatorService implements AsyncValidator {
 
   }
 
+  //Esta es la forma en q realmente se haría
+  // return this.http.get<any[]>(`http://localhost:3000/users?q=${ email }`)
+  // .pipe(
+  //   // delay(3000),
+  //   map( resp => {
+  //     return ( resp.length === 0 )
+  //         ? null
+  //         : { emailTaken: true }
+  //   })
+  // );
+
 
 
 }
